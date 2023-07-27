@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <img src="logo.jpg"class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <i class="fas fa-bars"></i>
+        </nav>
+
+        <div class="detel">
+            <p>UI/UX Designer</p>
+            <h1>I'm Pooja <span>Tayade</span></h1>
+            <p>This is my official Portfolio website to show all
+                <br>Details and work.
+            </p>
+            
+    <!-- -----------------------about------------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>i am an ethusiastic,self-movivated,responsible and hard working person.Currently pursuing my bachelor's degree in  Computer science and Engineering.Also with that I believe in continuous growth and stay updated with the latest trends and advancements in my field. I am constantly seeking new opportunities to expand my knowledge and skillset.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">EDUCATION</p>
+                        <p class="tab-links" onclick="opentab('skills')">SKILLS</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2023 - pursuing</span><br>B.tech, CSE</li>
+                            
+            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+            
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------portfolio------------------------------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titles">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work1.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Social media are interactive technologies that facilitate the creation and sharing of
+                            information, ideas, interests, and other forms of expression through virtual communities and
+                            networks.</p><a href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Fill your world with the songs, albums and artists that define you. Get unlimited access to
+                            millions of tracks, curated playlists and original content from the artists you know and
+                            love. </p><a href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work3.avif">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lot of drool-worthy trends from your favourite fashion brands, latest collections to slay
+                            your look every day & some WOW discounts!
+                            <br> Happy shopping!!
+                        </p><a href="#">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- -------------------------------------contact--------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>   poojatayade960450@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>   9960219977</p>
+                    <div class="social-icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+            
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="First name"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                        <label for="email">E-mail:</label><br>
+                        <input type="text" id="email" name="email" placeholder="Your mail Id"><br>
+                        <label for="text">Feedback:</label><br>
+                        <textarea name="msg" cols="10" rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn1">SUBMIT</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</html>
